@@ -24,6 +24,14 @@ For Learning Purpose
    5. Custom Verify Email Confirmation
 5. Looks for the branch for template theme
 
+## Theme Used
+
+Admin LTE 3
+
+1. Toastr
+2. SweetAlert2
+3. Dark Mode
+
 ## How to Start ?
 
 1. update .env file

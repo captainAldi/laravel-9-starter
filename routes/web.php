@@ -20,12 +20,6 @@ Route::get('/', function () {
 // Add Verify Page to Auth Scaffolding
 Auth::routes(['verify' => true]);
 
-// Route::middleware(['verified'])->group(function () {
-
-//     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
-
-// });
-
 // Prefix Group for /admin 
 Route::prefix('admin')->group(function () {
     
@@ -51,3 +45,18 @@ Route::prefix('user')->group(function () {
 
 
 });
+
+
+// For Testing Purpose
+Route::get('/active/page1', function () {
+    return view('home', [
+       'page' => 'ini page 1'
+    ]);
+})->name('active.page1');
+
+Route::get('/active/page2', function () {
+
+    return view('home', [
+       'page' => 'ini page 2'
+    ]);
+})->name('active.page2');

@@ -58,9 +58,9 @@ class LoginController extends Controller
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password']), $remember))
         {
             if (auth()->user()->role == 'admin') {
-                return redirect('/admin/home')->with('status', 'Berhasil Login');
+                return redirect('/admin/home')->with('pesan', 'Berhasil Login');
             }else{
-                return redirect('/user/home')->with('status', 'Berhasil Login');
+                return redirect('/user/home')->with('pesan', 'Berhasil Login');
             }
         }else{
             return redirect()->route('login')
